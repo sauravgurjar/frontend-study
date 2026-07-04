@@ -1,5 +1,4 @@
 import { useEffect, useMemo, useState } from 'react';
-import { Link } from 'react-router-dom';
 import {
   CalendarDays,
   ChevronDown,
@@ -477,9 +476,8 @@ export const DailyCAPage = () => {
                         </div>
                       </article>
                     ) : (
-                      <Link
+                      <article
                         key={item.id}
-                        to={`/dashboard/feed/${item.id}`}
                         className="rounded-xl border border-slate-100 bg-white p-5 shadow-sm transition hover:shadow-md"
                       >
                         <div className="flex gap-5">
@@ -519,7 +517,7 @@ export const DailyCAPage = () => {
                             />
                           )}
                         </div>
-                      </Link>
+                      </article>
                     )
                   )}
                 </div>
